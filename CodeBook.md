@@ -19,8 +19,8 @@ This results in dateset named "complete"
 5-Averages calculated for each variable and exported as a textfile
 End result is tidy.txt with two identifier columns and 66 measurements
 
-subject        		- ID of the subject          
-activity            - Activity description	
+subject-ID of the subject          
+activity-Activity description	
 TimeBodyAccMeanX        
 TimeBodyAccMeanY         
 TimeBodyAccMeanZ         
