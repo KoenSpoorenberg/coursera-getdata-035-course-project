@@ -44,7 +44,7 @@ x_test <- read.table("UCI HAR Dataset/test/X_test.txt")[measurements_needed]
 y_test <- read.table("UCI HAR Dataset/test/y_test.txt")
 subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt")
 
-#Merge the datasets
+# Merge the datasets
 x<- rbind(x_train,x_test)
 y<- rbind(y_train,y_test)
 subject<-rbind(subject_train,subject_test)
@@ -58,8 +58,7 @@ y[, 1] <- activities[y[, 1], 2]
 names(y) <- "activity"
 
 
-## 4_Appropriately label the data set with descriptive variable names
-###############################################################################
+## 4-Appropriately label the data set with descriptive variable names
 
 # correct column name
 names(subject) <- "subject"
@@ -67,13 +66,10 @@ names(subject) <- "subject"
 # bind the data in a single data set
 complete <- cbind(x, y, subject)
 
-# Step 5
-# Create a second, independent tidy data set with the average of each variable
-# for each activity and each subject
-###############################################################################
+## 5 - Create a second, independent tidy data set with the average of each variable
+## for each activity and each subject
 
 # 66 <- 68 columns but last two (activity & subject)
-averages_data <- ddply(complete, .(subject, activity), function(x) colMeans(x[, 1:66]))
+tidy_data <- ddply(complete, .(subject, activity), function(x) colMeans(x[, 1:66]))
 
-write.table(averages_data, "averages_data.txt", row.name=FALSE)
-?write.table
+write.table(tidy_data, "tidy.txt", row.name=FALSE)
