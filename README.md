@@ -18,4 +18,4 @@ run_analysis.R
 
 tidy.txt - result of the actions in run_analysis.R 
 
-CodeBook.md - Description of the content of tidy.txt
+CodeBook.md - Description/explanation of the content of tidy.txt
