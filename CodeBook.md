@@ -75,7 +75,7 @@ FreqBodyAccJerkMeanY
 FreqBodyAccJerkMeanZ    
 FreqBodyAccJerkStdX      
 FreqBodyAccJerkStdY      
-FreqBodyAccJerkStdZ     
+FreqBodyAccJerkStdZ 
 FreqBodyAccJerkMeanFreqX 
 FreqBodyAccJerkMeanFreqY 
 FreqBodyAccJerkMeanFreqZ
